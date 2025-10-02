@@ -79,5 +79,19 @@
       }
     });
   </script>
+    <script>
+    function setMobileFont() {
+      if (window.innerWidth <= 768) {
+        document.body.style.fontFamily = '"Comic Neue", "Arial Rounded MT Bold", cursive, sans-serif';
+        const texts = document.querySelectorAll('h1, h2, p, a');
+        texts.forEach(el => {
+          el.style.fontFamily = '"Comic Neue", "Arial Rounded MT Bold", cursive, sans-serif';
+        });
+      }
+    }
+
+    setMobileFont();
+    window.addEventListener('resize', setMobileFont);
+  </script>
 </body>
 </html>
