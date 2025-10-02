@@ -151,3 +151,27 @@ a:hover {
   text-decoration: underline;
   color: #ff69b4;     
 }
+#cookie-clicker {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 3px dashed #ff69b4;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+}
+
+#cookie-button {
+  font-size: 2rem;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #ff69b4;
+  color: white;
+  box-shadow: 3px 3px 0 #000;
+  transition: transform 0.2s;
+}
+
+#cookie-button:hover {
+  background-color: #1F85DE;
+}

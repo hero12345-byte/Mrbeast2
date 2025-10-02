@@ -24,27 +24,59 @@
       Stuur mij een e-mail
     </a>
     <a href="fotos.html">Foto’s van MrBeast</a>
-    </a>
   </div>
 
   <p>MrBeast is een youtuber die geld geeft en rare dingen doet. Ik vind hem leuk want hij doet grappige spellen en soms grote dingen. Ik kijk hem elke dag want het is leukk en vet. Soms maakt ie video’s met veel geld en ik wil dat ook hebben.</p>
-  <p>Donec quam felis, <em>ultricies</em> nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.</p>
+
+  <div id="cookie-clicker">
+    <h2>Cookie Clicker 🍪</h2>
+    <p id="score">Je hebt 0 koekjes</p>
+    <button id="cookie-button">🍪 Klik hier!</button>
+  </div>
+
+  <script>
+    const cookieButton = document.getElementById("cookie-button");
+    const scoreDisplay = document.getElementById("score");
+
+    // Ophalen opgeslagen score of 0
+    let score = localStorage.getItem("cookieScore");
+    if (score === null) {
+      score = 0;
+    } else {
+      score = parseInt(score);
+    }
+
+   
+    scoreDisplay.innerHTML = "Je hebt " + score + " koekjes";
+
+    cookieButton.addEventListener("click", () => {
+      score++;
+      scoreDisplay.innerHTML = "Je hebt " + score + " koekjes";
+
+      localStorage.setItem("cookieScore", score);
+
+      cookieButton.style.transform = "scale(1.2)";
+      setTimeout(() => {
+        cookieButton.style.transform = "scale(1)";
+      }, 150);
+    });
+  </script>
 
   <script>
     const titel = document.querySelector("h1");
 
     titel.addEventListener("click", () => {
       let tijd = new Date().getHours();
-       if (tijd < 12) {
-      titel.innerHTML = "Goedemorgen, MrBeast fan!";
-      titel.style.color = "yellow";
-    } else if (tijd < 18) {
-      titel.innerHTML = "Goedemiddag, MrBeast fan!";
-      titel.style.color = "yellow";
-    } else {
-      titel.innerHTML = "Goedenavond, MrBeast fan!";
-      titel.style.color = "yellow";
-    }
+      if (tijd < 12) {
+        titel.innerHTML = "Goedemorgen, MrBeast fan!";
+        titel.style.color = "yellow";
+      } else if (tijd < 18) {
+        titel.innerHTML = "Goedemiddag, MrBeast fan!";
+        titel.style.color = "yellow";
+      } else {
+        titel.innerHTML = "Goedenavond, MrBeast fan!";
+        titel.style.color = "yellow";
+      }
     });
   </script>
 </body>
