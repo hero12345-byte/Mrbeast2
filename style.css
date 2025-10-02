@@ -175,3 +175,12 @@ a:hover {
 #cookie-button:hover {
   background-color: #1F85DE;
 }
+@media (max-width: 768px) {
+  body {
+    font-family: "Comic Neue", "Arial Rounded MT Bold", cursive, sans-serif;
+  }
+
+  h1, h2, p, a {
+    font-family: "Comic Neue", "Arial Rounded MT Bold", cursive, sans-serif;
+  }
+}
